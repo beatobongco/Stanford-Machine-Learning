@@ -46,3 +46,10 @@ Why do we square errors? Most commonly used one for regression problems.
 
 The mean is halved as a convenience for the computation of the gradient descent, as the derivative term of the square function will cancel out the term.
 
+## Gradient descent
+
+:= is an assignment operator
+
+α or alpha is the learning rate. Think of it as how big the steps are
+
+The gradient descent algorith simultaneously updates theta values (store vals in temp variables)
