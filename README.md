@@ -48,8 +48,24 @@ The mean is halved as a convenience for the computation of the gradient descent,
 
 ## Gradient descent
 
+![image](https://cloud.githubusercontent.com/assets/3739702/26201119/f4e4503a-3c03-11e7-8c58-90994d4e7f07.png)
+
 := is an assignment operator
 
 α or alpha is the learning rate. Think of it as how big the steps are
 
-The gradient descent algorith simultaneously updates theta values (store vals in temp variables)
+The gradient descent algorithm simultaneously updates theta values (store vals in temp variables
+
+The derivative part of the algo works by finding the slope of the line tangent to the point.
+
+Then we subtract learning rate * slope from theta. This is to get to the minimum. If you look at the graph, slope is positive so theta - positive number means we go down.
+
+![image](https://cloud.githubusercontent.com/assets/3739702/26201132/09473e98-3c04-11e7-856e-b922fdfb93ca.png)
+
+If learning rate is too small, gradient descent will be slow. If too big can overshoot or diverge.
+
+### Gradient descent algorithm expanded
+
+![image](https://cloud.githubusercontent.com/assets/3739702/26201818/6564fff0-3c07-11e7-9324-acc6ea600cdb.png)
+
+Gradient descent works because there's no local optima, just one global optimum.
