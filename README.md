@@ -142,3 +142,36 @@ Not all matrices have inverse, these are called "singular" or "degenerate".
 
 ![image](https://cloud.githubusercontent.com/assets/3739702/26291334/846deb9e-3ee8-11e7-9e03-0aefc4676c5f.png)
 
+## Multivariate Linear Regression
+
+Recall:
+
+![image](https://cloud.githubusercontent.com/assets/3739702/26306140/364c9eb6-3f2d-11e7-8ee1-9867fd886057.png)
+
+We are setting x sub 0 to 1 for convenience purposes. This is so we can perform matrix operations on theta and x. Also because of this, hypothesis can now be written as theta transpose x.
+
+### Feature scaling
+
+If features are on different scale, it will take long time to converge to global minimum.
+
+Solution is to scale features.
+
+e.g. You have 2 features, number of rooms (1-5) and size in sq ft (0 - 2000) it can make your contour graph look funky. Solution is to divide no. of rooms / 5 and size / 2000 to make them be between 0 and 1.
+
+Feature scaling generally is getting every feature into approx: `-1 <= xi <= 1`
+
+Some features that are not too huge are OK to leave alone though (-/+ 3 and -/+ 1/3)
+
+### Mean normalization
+
+![image](https://cloud.githubusercontent.com/assets/3739702/26308039/7189b694-3f32-11e7-8dff-f168559c3d27.png)
+
+### Features and Polynomial Regression
+
+To improve features...
+
+* you can combine multiple features in to one (e.g. width x height)
+* change curve of the hypothesis function by making it quadratic, cubic, etc. Note that scaling becomes more important if you use this.
+
+
+
