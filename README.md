@@ -69,3 +69,76 @@ If learning rate is too small, gradient descent will be slow. If too big can ove
 ![image](https://cloud.githubusercontent.com/assets/3739702/26201818/6564fff0-3c07-11e7-9324-acc6ea600cdb.png)
 
 Gradient descent works because there's no local optima, just one global optimum.
+
+## Linear Algebra review
+
+Recall syntax of Aij = i, j enrtry, ith row jth column. R can be used to denote matrices. e.g. R3x3
+
+Vector - 1 col matrix. n-dimensional vector. e.g. R4
+
+Convention: uppercase for matrices and lowercase for vector.
+
+Adding matrices: just add elements in same place. Can only add matrices with same dimension.
+
+Scalar multiplication/division: just multiply/divide the scalar with each element in matrix.
+
+MDAS applies to matrix operations.
+
+### Multiplying matrices and vectors
+
+![image](https://cloud.githubusercontent.com/assets/3739702/26272529/5ce8e50c-3d4d-11e7-9db2-0424254b3157.png)
+
+Just multiply each row element of the matrix by its corresponding element of the vector and sum them. This sum is the first element of the new vector.
+
+The resulting vector length will be equal to the column length of the matrix.
+
+You can only multiply matrices and vectors of same size (matrix row size and vector size)
+
+### Why is this useful?
+
+You can use matrix vector multiplication to get predictions given a hypothesis.
+
+![image](https://cloud.githubusercontent.com/assets/3739702/26272604/453b6360-3d4f-11e7-9738-5bf07d2a6258.png)
+
+Doing it this way (in any programming language) is more efficient than implementing a `for` loop.
+
+### Matrix x matrix
+
+Simple as repeated matrix vector multiplication.
+
+![image](https://cloud.githubusercontent.com/assets/3739702/26272795/2d0a6520-3d54-11e7-9225-36313f247bfa.png)
+
+Some rules:
+
+![image](https://cloud.githubusercontent.com/assets/3739702/26272807/93065078-3d54-11e7-9168-cf530ea41298.png)
+
+This is useful for applying multiple hypotheses to your data.
+
+![image](https://cloud.githubusercontent.com/assets/3739702/26272861/93efc3ec-3d55-11e7-976b-bb0e27d491ef.png)
+
+### Properties of matrices
+
+1. Not commutative.
+
+`A x B != B x A`
+
+2. Is associative.
+
+`A x B x C === A x (B x C) === (A x B) x C`
+
+3. Identity matrix
+
+![image](https://cloud.githubusercontent.com/assets/3739702/26272922/daf3f41a-3d56-11e7-85bd-47a42486b613.png)
+
+### Matrix Inverse
+
+Inverse is basically A * Inverse = Identity matrix
+
+![image](https://cloud.githubusercontent.com/assets/3739702/26291146/581d14ee-3ee7-11e7-89ce-49722821fa85.png)
+
+Not all matrices have inverse, these are called "singular" or "degenerate".
+
+### Matrix Transpose
+
+![image](https://cloud.githubusercontent.com/assets/3739702/26291334/846deb9e-3ee8-11e7-9e03-0aefc4676c5f.png)
+
