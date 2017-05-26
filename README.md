@@ -173,5 +173,39 @@ To improve features...
 * you can combine multiple features in to one (e.g. width x height)
 * change curve of the hypothesis function by making it quadratic, cubic, etc. Note that scaling becomes more important if you use this.
 
+## Computing Parameters Analytically
+
+### Normal equation
+
+Solves for the global minimum at once.
+
+![image](https://cloud.githubusercontent.com/assets/3739702/26335496/5c1bc66a-3fa7-11e7-8808-4ae3b0128316.png)
+
+Things to remember:
+  * we still set x0 to 1
+  * no need to do feature scaling
+  * in Octave transpose XT is written as X` pronounced X prime
+
+### Normal Equation vs. Gradient Descent
+
+![image](https://cloud.githubusercontent.com/assets/3739702/26335641/47d6285c-3fa8-11e7-9526-dac54e33e8cb.png)
+![image](https://cloud.githubusercontent.com/assets/3739702/26335744/f8e62caa-3fa8-11e7-8c24-31ba6c37e3e3.png)
+
+TLDR: Normal equation is slow O(N^3). Use it if features are < 1000
+
+Also, when we get to more complex learning algorithms, normal equation wont work.
+
+### Normal equation non-invertibility
+
+The normal equation requires you to do X transpose X but sometimes you can't do this due to X being non-intvertible (degenerate / singular).
+
+As long as you use Octave's pseudo inverse `pinv` function you should be fine.
+
+Causes for non-invertibility:
+
+* Redundant features
+* Too many features vs training examples (training ex <= features)
+
+This can be solved by deleting some features or using "regularization" (TBE)
 
 
