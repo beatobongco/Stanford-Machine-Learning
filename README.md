@@ -181,6 +181,8 @@ Solves for the global minimum at once.
 
 ![image](https://cloud.githubusercontent.com/assets/3739702/26335496/5c1bc66a-3fa7-11e7-8808-4ae3b0128316.png)
 
+![image](https://cloud.githubusercontent.com/assets/3739702/26476714/83defa04-41fb-11e7-8271-496672610303.png)
+
 Things to remember:
   * we still set x0 to 1
   * no need to do feature scaling
