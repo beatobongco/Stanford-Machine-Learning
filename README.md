@@ -210,4 +210,99 @@ Causes for non-invertibility:
 
 This can be solved by deleting some features or using "regularization" (TBE)
 
+## Octave Tutorial
 
+Great prototyping language, get your algorithms right. Let's take Andrew Ng's advice!
+
+Creating matrixes
+
+```
+A = [ 1 2; 3 4; 5 6]
+
+A =
+1 2
+3 4
+5 6
+```
+
+Useful functions:
+
+`o: optional`
+
+`ones(x, y), zeroes(x, y)` produces matrixes of x by y dimension
+
+`hist() generates histogram`
+
+`eye()` generates identity matrix
+
+`help <command>`
+
+`size(matrix, o: attribute_index)` - generates the size of the matrix [rows, cols], having attribute_index returns number of index = 1: rows,  index = 2: cols.
+
+`length(vector || matrix)` - returns number of longest dimension, if vector just the length
+
+`pwd, ls`
+
+`load <path>` - loads file filename as variable filename
+
+`who` - show all variables
+
+`whos` - verbose who
+
+`clear <None or variable>` - deletes variable; if None: clear all
+
+`variable = priceY(1: 10)` gets this matrix and sets its Y to 1 .. 10
+
+`save <output_file.mat> <variable>` saves variable as file output_file as binary
+
+`save <output_file.txt> <variable> -ascii` save as human readable
+
+```
+a = [1 2; 3 4; 5 6]
+# Note: all these can be assignments also!
+a(x, y) = get elem x, y
+a(3, 2) = 6
+a(2, :) = : means all
+a(2, :) = go down 2, get all width
+>>> 3 4
+a(:, 2) = go right 2, get all height
+>>>
+2
+4
+6
+a([n, m], :) = do down 1 and 3 and get all right
+a(:) = put all elems of a into a single vector
+```
+
+`[A, B]` is equivalent to this:
+![image](https://cloud.githubusercontent.com/assets/3739702/26529265/e8d1b692-43f7-11e7-95f7-297a16589629.png)
+
+```
+C = [A; B]
+
+A A
+A A
+B B
+B B
+```
+
+![image](https://cloud.githubusercontent.com/assets/3739702/26529485/7775a8e2-43fb-11e7-87ee-2caf85aef5f6.png)
+
+`A .[operator]` element-wise operation
+
+You can also do inverse.
+![image](https://cloud.githubusercontent.com/assets/3739702/26549029/f68b7ea2-44b1-11e7-9d46-adcce6454db1.png)
+
+A' (quotation mark, pronounced prime) to transpose
+
+![image](https://cloud.githubusercontent.com/assets/3739702/26549129/6f814c42-44b2-11e7-804b-326046d5c55e.png)
+
+`max` is a useful function, just be careful as its usage is a bit tricky
+
+![image](https://cloud.githubusercontent.com/assets/3739702/26549455/1628b9a8-44b4-11e7-9c31-9698f6fd9e27.png)
+
+returns max row if on matrix, max element if one dimension, index if lefthand has 2 elements
+
+You can also get a matrix of 0 or 1 based on comparison. Also, use find (returns index of matching)
+
+![image](https://cloud.githubusercontent.com/assets/3739702/26549185/afb72d7c-44b2-11e7-9495-cd38e84e43d9.png)
