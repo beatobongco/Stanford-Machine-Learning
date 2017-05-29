@@ -275,6 +275,7 @@ a(:) = put all elems of a into a single vector
 ```
 
 `[A, B]` is equivalent to this:
+
 ![image](https://cloud.githubusercontent.com/assets/3739702/26529265/e8d1b692-43f7-11e7-95f7-297a16589629.png)
 
 ```
@@ -291,6 +292,7 @@ B B
 `A .[operator]` element-wise operation
 
 You can also do inverse.
+
 ![image](https://cloud.githubusercontent.com/assets/3739702/26549029/f68b7ea2-44b1-11e7-9d46-adcce6454db1.png)
 
 A' (quotation mark, pronounced prime) to transpose
@@ -299,10 +301,10 @@ A' (quotation mark, pronounced prime) to transpose
 
 `max` is a useful function, just be careful as its usage is a bit tricky
 
-![image](https://cloud.githubusercontent.com/assets/3739702/26549455/1628b9a8-44b4-11e7-9c31-9698f6fd9e27.png)
+![image](https://cloud.githubusercontent.com/assets/3739702/26549185/afb72d7c-44b2-11e7-9495-cd38e84e43d9.png)
 
 returns max row if on matrix, max element if one dimension, index if lefthand has 2 elements
 
 You can also get a matrix of 0 or 1 based on comparison. Also, use find (returns index of matching)
 
-![image](https://cloud.githubusercontent.com/assets/3739702/26549185/afb72d7c-44b2-11e7-9495-cd38e84e43d9.png)
+![image](https://cloud.githubusercontent.com/assets/3739702/26549455/1628b9a8-44b4-11e7-9c31-9698f6fd9e27.png)
