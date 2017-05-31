@@ -308,3 +308,85 @@ returns max row if on matrix, max element if one dimension, index if lefthand ha
 You can also get a matrix of 0 or 1 based on comparison. Also, use find (returns index of matching)
 
 ![image](https://cloud.githubusercontent.com/assets/3739702/26549455/1628b9a8-44b4-11e7-9c31-9698f6fd9e27.png)
+
+Lots of utility functions too:
+
+![image](https://cloud.githubusercontent.com/assets/3739702/26549597/c44cd7bc-44b4-11e7-811b-2c5ec101d673.png)
+
+`[start:step:end] like [0:1:10]` generates 1d matrix from start up to end, stepping by step
+
+`plot(x, y, color)` exactly as advertised
+
+![image](https://cloud.githubusercontent.com/assets/3739702/26550502/0ac499ec-44b9-11e7-910f-31a27d462f3e.png)
+
+Check out `hold on`, it keeps graph there so you can keep on drawing.
+
+there's also `legend` and `title`.
+
+`print -dpng 'myPlot.png'` get a png of current drawing
+
+`close` removes figure
+
+`subplot(1, 2, 1)` divides plot into 1x2 grid, acess first element. Access in this context means where your `plot()` will draw on.
+
+`axis([xmin, xmax, ymin, ymax])` sets max of axis e.g. `axis([0, 10, -1, 20])`
+
+`clf` clear figure
+
+### Control statements
+
+```octave
+for i=1:10,
+  v(i) = 2^i;
+end;
+```
+
+`break` and `continue` avail
+
+```octave
+while i <= 5,
+  v(i) = 100;
+  i = i + 1
+end;
+```
+
+```octave
+
+if true,
+  v = 1;
+elseif false,
+  v = 2
+else
+  v = 3
+end;
+```
+
+Create functions with `.m` files. cd into correct path.
+
+```octave
+function y = squareThisNumber(x)
+
+y = x^2;
+```
+
+Pattern is
+
+`function return_value = someFunction(args)`
+
+return_value can be arr [x, y]
+
+Invoke functions by using filename, so if saved as example.m call as `example(n)`.
+
+Apparently, the definition inside the function file doesn't do shit.
+
+Comments are `% comment`
+
+## Vectorization
+
+Basically use libraries and use matrix ops
+
+![image](https://cloud.githubusercontent.com/assets/3739702/26572387/b2fa6042-4554-11e7-8e09-cdcb61e0512d.png)
+
+Use vectors to calculate faster and make code terse
+
+![image](https://cloud.githubusercontent.com/assets/3739702/26572672/cc3396f4-4555-11e7-8f5a-3a96b4a875dc.png)
