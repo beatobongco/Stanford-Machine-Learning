@@ -390,3 +390,13 @@ Basically use libraries and use matrix ops
 Use vectors to calculate faster and make code terse
 
 ![image](https://cloud.githubusercontent.com/assets/3739702/26572672/cc3396f4-4555-11e7-8f5a-3a96b4a875dc.png)
+
+## Classification
+
+Linear regression ain't good for classification problems.
+
+Sigmoid function === logistic function
+
+![image](https://cloud.githubusercontent.com/assets/3739702/26752763/edb0854e-4889-11e7-9dee-8603b7eceb40.png)
+
+In a binary classification, the hypothesis basically says what are your chances to have something (e.g. if tumor is malignant or what)
