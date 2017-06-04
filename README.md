@@ -400,3 +400,27 @@ Sigmoid function === logistic function
 ![image](https://cloud.githubusercontent.com/assets/3739702/26752763/edb0854e-4889-11e7-9dee-8603b7eceb40.png)
 
 In a binary classification, the hypothesis basically says what are your chances to have something (e.g. if tumor is malignant or what)
+
+### Decision boundary
+
+Basically a decision boundary is a line that separates a prediction y to be classified as 0 and 1.
+
+Note theta transpose X (`X * theta` in octave) >= 0: y = 1 else y = 0
+
+![image](https://cloud.githubusercontent.com/assets/3739702/26754844/d3905ee8-48b4-11e7-89b1-67ce9ca454e1.png)
+
+Can use different exponents to get nonlinear decision boundaries (like ^2 for circle). You can really funky shapes.
+
+![image](https://cloud.githubusercontent.com/assets/3739702/26755061/76f26f4c-48b8-11e7-901c-2ce38a3c077f.png)
+
+In order to get our discrete 0 or 1 classification, we can translate the output of the hypothesis function as follows:
+
+![image](https://cloud.githubusercontent.com/assets/3739702/26755101/22c80336-48b9-11e7-8e3e-0b9b197fee0b.png)
+
+![image](https://cloud.githubusercontent.com/assets/3739702/26755103/2db1270a-48b9-11e7-9598-a7c95d4918ab.png)
+
+### Logistic regression cost function
+
+![image](https://cloud.githubusercontent.com/assets/3739702/26755173/9e073142-48ba-11e7-8b9d-dd69c9129bce.png)
+
+![image](https://cloud.githubusercontent.com/assets/3739702/26755213/65ab61aa-48bb-11e7-9d70-7b4c9cb52be6.png)
