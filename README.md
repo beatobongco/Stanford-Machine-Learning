@@ -424,3 +424,7 @@ In order to get our discrete 0 or 1 classification, we can translate the output 
 ![image](https://cloud.githubusercontent.com/assets/3739702/26755173/9e073142-48ba-11e7-8b9d-dd69c9129bce.png)
 
 ![image](https://cloud.githubusercontent.com/assets/3739702/26755213/65ab61aa-48bb-11e7-9d70-7b4c9cb52be6.png)
+
+### Simplifying logistic regression cost function
+
+![image](https://user-images.githubusercontent.com/3739702/27065928-143634ba-5033-11e7-854f-3d5cbd0e0134.png)
