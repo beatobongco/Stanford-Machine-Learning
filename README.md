@@ -1,3 +1,5 @@
+** important: I have stopped update these notes after finding that reviewing through [Anki](https://apps.ankiweb.net/) is more effective. An updated Anki Deck Package (.apkg) is indluded in this repo. **
+
 # Stanford Machine Learning
 
 Notes and code for Andrew Ng's class on machine learning.
