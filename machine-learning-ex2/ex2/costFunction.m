@@ -21,9 +21,10 @@ grad = zeros(size(theta));
 %
 
 h = sigmoid(X*theta);
+disp(-y .* log(h))
 J = 1/m * sum(-y .* log(h) - (1 - y) .* log(1-h));
 % alpha * gradient is how much you should subtract from your theta
-grad = 1/m * sum((h .- y) .* X);
+grad = 1/m * sum((h - y) .* X);
 grad = grad';
 
 

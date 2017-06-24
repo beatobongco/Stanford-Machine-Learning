@@ -16,12 +16,14 @@ for iter = 1:num_iters
     % Hint: While debugging, it can be useful to print out the values
     %       of the cost function (computeCost) and gradient here.
     %
-    newTheta = [];
-    for j = 1:length(theta)
-        newTheta(j, 1) = theta(j) - alpha / m * sum((X * theta - y) .* X(:, j));
-    end
-
-    theta = newTheta;
+    %newTheta = [];
+    %for j = 1:length(theta)  
+    %    newTheta(j, 1) = theta(j) - alpha / m * sum((X * theta - y) .* X(:, j));
+    %end
+    %theta = newTheta
+    err = X * theta - y;
+    c = alpha / m;
+    theta = theta - c * sum(err .* X)';
     % ============================================================
 
     % Save the cost J in every iteration
