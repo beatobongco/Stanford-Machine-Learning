@@ -18,21 +18,14 @@ grad = zeros(size(theta));
 %               derivatives of the cost w.r.t. each parameter in theta
 
 h = sigmoid(X*theta);
-reg = 0;
-for i = 2:length(theta)
-  reg += theta(i)^2;
-endfor
+c = lambda/(2 * m);
 
-J = 1/m * sum(-y .* log(h) - (1 - y) .* log(1-h)) + lambda/(2 * m) * reg;
-% alpha * gradient is how much you should subtract from your theta
-grad = (1/m * sum((h .- y) .* X))';
+% https://www.gnu.org/software/octave/doc/interpreter/Index-Expressions.html
+J = 1/m * sum(-y .* log(h) - (1 - y) .* log(1-h)) + c * sum(theta(2:end).^2);
 
-for i = 2:length(theta)
-grad(i) += lambda / m * theta(i);
-endfor
-grad = grad';
-
-
+xtra = (lambda / m) * theta;
+xtra(1) = 0; % we're not regularizing theta0
+grad = (1/m * sum((h - y) .* X)' + xtra);
 % =============================================================
 
 end

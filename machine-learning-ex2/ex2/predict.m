@@ -16,14 +16,7 @@ p = zeros(m, 1);
 %
 
 h = sigmoid(X * theta);
-
-for i = 1:length(h)
-  if h(i) >= .5
-    p(i) = 1;
-  else
-    p(i) = 0;
-  endif
-endfor
+p = arrayfun(@(x) ifelse(x >= .5, 1, 0), h);
 
 % =========================================================================
 
