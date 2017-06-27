@@ -21,14 +21,19 @@ p = zeros(size(X, 1), 1);
 %       can use max(A, [], 2) to obtain the max for each row.
 %
 
+a1 = [ones(size(X, 1), 1) X]; % add new col of ones
 
+% deconstructing a * theta'
+% a and theta are both _ x n matrices
+% you're taking each row of a, then applying each row of theta to it and summing the values
+% each row of new matrix will be 
+% [sum of row 1 of theta * row 1 of a,  sum of row 2 of theta * row 1 of a, ...]
 
+a2 = [ones(size(a1, 1), 1) sigmoid(a1 * Theta1')];
+a3 = sigmoid(a2 * Theta2');
 
-
-
-
-
-
+% max(a, [], 2) gets the max of each row and returns 2 vals, maxes and index
+[M , p] = max(a3 , [] , 2);
 % =========================================================================
 
 
