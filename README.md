@@ -1,4 +1,4 @@
-** important: I have stopped update these notes after finding that reviewing through [Anki](https://apps.ankiweb.net/) is more effective. An updated Anki Deck Package (.apkg) is indluded in this repo. **
+** important: I have stopped updating these notes after finding that reviewing through [Anki](https://apps.ankiweb.net/) is more effective. An updated Anki Deck Package (.apkg) is indluded in this repo. **
 
 # Stanford Machine Learning
 
