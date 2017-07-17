@@ -24,10 +24,10 @@ p = zeros(size(X, 1), 1);
 a1 = [ones(size(X, 1), 1) X]; % add new col of ones
 
 % deconstructing a * theta'
-% a and theta are both _ x n matrices
+% a and theta are both _ x n matrices where n is your num features
 % you're taking each row of a, then applying each row of theta to it and summing the values
-% each row of new matrix will be 
-% [sum of row 1 of theta * row 1 of a,  sum of row 2 of theta * row 1 of a, ...]
+% each row of new matrix will be (r = row 1 of a)
+% [sum(row 1 of theta .* r),  sum(row 2 of theta .* r), ...]
 
 a2 = [ones(size(a1, 1), 1) sigmoid(a1 * Theta1')];
 a3 = sigmoid(a2 * Theta2');

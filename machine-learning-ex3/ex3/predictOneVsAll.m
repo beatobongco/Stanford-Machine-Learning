@@ -37,7 +37,8 @@ for i=1:size(X)(1)
   p(i) = ix;
 endfor
 
-
+% this is much better though
+[_, p] = max(X * all_theta', [], 2)
 
 
 
